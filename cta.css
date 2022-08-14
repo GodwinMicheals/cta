@@ -51,7 +51,6 @@
     width: 100%;
 }
 
-
 .item_b_info {
     display: flex;
     flex-direction: row;
@@ -113,10 +112,6 @@
     visibility: visible;
 }
 
-svg:not(:root) {
-    overflow: hidden;
-}
-
 .hidden_info {
     display: none;
 }
@@ -130,10 +125,11 @@ svg:not(:root) {
     flex-direction: column;
     justify-content: space-around;
 }
-.card_banner > img {
+
+.card_banner>img {
     max-width: 80%;
 }
-/* hsl(0deg 0% 90%) */
+
 .card_banner {
     max-width: 50%;
     padding: 1rem 0;
@@ -141,7 +137,6 @@ svg:not(:root) {
 
 .card_banner_btn {
     position: relative;
-    box-sizing: border-box;
     width: 90%;
     background: #2179e3;
     color: #fef7f0;
@@ -149,14 +144,13 @@ svg:not(:root) {
     border: none;
     font-size: 2vw;
     font-weight: 400;
-    /**/
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 2px;
 
 }
 
-.card_banner_btn > span {
+.card_banner_btn>span {
     position: absolute;
     margin-top: -1px;
     transform: translateX(100%);
@@ -169,7 +163,6 @@ svg:not(:root) {
 
 #products {
     font-family: inherit;
-    /**/
     width: 100%;
 }
 
@@ -190,9 +183,6 @@ svg:not(:root) {
     background-color: #1f7be1;
     text-align: center;
     padding: 1.3vw;
-}
-
-.s1 {
     color: #fef7f0;
 }
 
@@ -204,8 +194,8 @@ svg:not(:root) {
 #our_take>div>ul {
     padding-left: 2rem;
 }
-@media only screen and (min-width: 900px) {
 
+@media only screen and (min-width: 900px) {
     .cta_card_details {
         display: flex;
         padding: 1rem;
