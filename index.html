@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./cta.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700;1,8..144,800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+
+.cta_card {
+    font-size: 1rem;
+    background: #fff;
+    border: 2px solid #d8d9da;
+}
+
+.cta_container {
+    padding: 1rem;
+}
+
+.cta_card_header {
+    /* padding: 1rem; */
+    color: inherit;
+    padding: 1rem;
+}
+
+.cta_info_text,
+.info_name {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #64666a;
+    margin-bottom: .5rem;
+}
+
+.cta_info_link>a {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.cta_info_link>a:hover {
+    text-decoration: underline;
+}
+
+.cta_card_details {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.details_item_a,
+.details_item_b {
+    width: 100%;
+}
+
+
+.item_b_info {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0;
+}
+
+.info_name {
+    font-size: 1.8vw;
+    font-weight: 400;
+    width: 30%;
+}
+
+.info_val {
+    font-size: 1.8vw;
+    font-weight: 400;
+    width: 70%;
+    padding-left: 0.5rem;
+}
+
+.cta_card_info {
+    cursor: pointer;
+}
+
+.btn_item,
+.item_b_info:not(:first-child) {
+    border-top: 1px solid #d8d9da;
+}
+
+.btn:hover {
+    background-color: #eef7ff;
+}
+
+.btn {
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    background: none;
+    text-align: left;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.hidden_info {
+    display: none;
+}
+
+.display {
+    display: block !important;
+}
+
+.details_item_a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card_banner > img {
+    max-width: 80%;
+}
+/* hsl(0deg 0% 90%) */
+.card_banner {
+    max-width: 50%;
+    padding: 1rem 0;
+}
+
+.card_banner_btn {
+    position: relative;
+    box-sizing: border-box;
+    width: 90%;
+    background: #2179e3;
+    color: #fef7f0;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    font-size: 2vw;
+    font-weight: 400;
+    /**/
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+
+}
+
+.card_banner_btn > span {
+    position: absolute;
+    margin-top: -1px;
+    transform: translateX(100%);
+    transition: all .5s;
+}
+
+.arr_rt {
+    margin-left: 8px;
+}
+
+#products {
+    font-family: inherit;
+    /**/
+    width: 100%;
+}
+
+#products td {
+    padding: 1.3rem;
+    width: 50%;
+}
+
+#products tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#products tr:hover {
+    background-color: #ddd;
+}
+
+.table_title {
+    background-color: #1f7be1;
+    text-align: center;
+    padding: 1.3rem;
+}
+
+.s1 {
+    color: #fef7f0;
+}
+
+#our_take>div {
+    padding-left: 1rem;
+    padding-top: .5rem;
+}
+
+#our_take>div>ul {
+    padding-left: 2rem;
+}
+@media only screen and (min-width: 900px) {
+
+    .cta_card_details {
+        display: flex;
+        padding: 1rem;
+        flex-direction: row;
+    }
+
+    .details_item_a,
+    .info_name {
+        width: 30%;
+    }
+
+    .details_item_b,
+    .info_val {
+        width: 70%;
+        padding-left: 0.5rem;
+    }
+
+    .card_banner {
+        color: hsl(0deg 0% 90%);
+        max-width: 70% !important;
+    }
+
+    .card_banner_btn>span {
+        margin-top: -3px;
+    }
+}
+    </style>
+    <title>CTA</title>
+</head>
+<body>
+    <div class="cta_container">
+        <div class="cta_card">
+            <div class="cta_card_header">
+                <div>
+                    <div class="cta_info_text">
+                        <p>Best for: Cash back — bonus categories + high ongoing rate</p>
+                    </div>
+                </div>
+                <div class="cta_info_link">
+                    <a href="cta.html">Chase Freedom Unlimited®</a>
+                </div>
+            </div>
+            <div>
+                <div class="cta_card_details">
+                    <div class="details_item_a">
+                        <div class="card_banner">
+                            <img src="./VIMLA-logo.png" title="VIMLA LOGO" />
+                        </div>
+                        <div>
+                            <button onmouseover="_d('#arr').classList.toggle('arr_rt')" onmouseout="_d('#arr').classList.toggle('arr_rt')" href="/" class="card_banner_btn">Till Vimla <span id="arr">&#8594</span></button>
+                        </div>
+                    </div>
+                    <div class="details_item_b">
+                        <div>
+                            <div class="item_b_info">
+                                <p class="info_name">Annual fee</p>
+                                <p class="info_val">$0</p>
+                            </div>
+                            <div class="item_b_info">
+                                <p class="info_name">Rewards rate</p>
+                                <p class="info_val">1.5%-6.5%</p>
+                            </div>
+                            <div class="item_b_info">
+                                <p class="info_name">Intro offer</p>
+                                <p class="info_val">$300</p>
+                            </div>
+                            <div class="item_b_info">
+                                <p class="info_name">Recommended Credit Score</p>
+                                <p class="info_val">690-850
+                                (Good - Excellent)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta_card_info">
+                <a id="pd" onclick="product_details()" class="btn_item">
+                    <button class="btn">
+                        <p>Product Details</p>
+                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="prd_arrow_down" class="arrow show" fill="currentcolor" focusable="false">
+                            <path d="M1034 1543L316 825l113-114 605 605 605-605 113 114z"></path>
+                        </svg>
+                        <svg viewBox="0 0 2048 2048" aria-hidden="true"  id="prd_arrow_up" class="arrow" fill="currentcolor" focusable="false">
+                            <path d="M1639 1358l-605-605-605 605-113-113 718-718 718 718z"></path>
+                        </svg>
+                    </button>
+                    <div id="product_details" class="hidden_info">
+                        <div class="table_title">
+                            <strong class="s1">Hallon mobilabonnemang</strong>
+                        </div>
+                        <table id="products" cellspacing="0" cellpadding="0">
+                            <tr valign="middle">
+                                <td>Nät:</td>
+                                <td>Tre</td>
+                            </tr>
+                            <tr>
+                                <td>Surfmängd::</td>
+                                <td>4GB - 100GB</td>
+                            </tr>
+                            <tr>
+                                <td>Sparad surf::</td>
+                                <td>Max 100GB / månad </td>
+                            </tr>
+                            <tr>
+                                <td>Pris:</td>
+                                <td>99 - 349 kr / månad</td>
+                            </tr>
+                            <tr>
+                                <td>Fria samtal/SMS/MMS:</td>
+                                <td>Ja</td>
+                            </tr>
+                            <tr>
+                                <td>Bindningstid:</td>
+                                <td>Nej, endast med hårdvara</td>
+                            </tr>
+                            <tr>
+                                <td>Möjlighet att pausa abonnemang:</td>
+                                <td>Nej</td>
+                            </tr>
+                            <tr>
+                                <td>Företagsabonnemang:</td>
+                                <td>Ja</td>
+                            </tr>
+                            <tr>
+                                <td>Kundservice:</td>
+                                <td>Chatt, forum, kontaktformulär (ej telefon)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+
+                <div class="btn_item">
+                    <button class=" btn">
+                        <p>Our Take</p>
+                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="take_arrow_down" class="arrow show" fill="currentcolor"
+                            focusable="false">
+                            <path d="M1034 1543L316 825l113-114 605 605 605-605 113 114z"></path>
+                        </svg>
+                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="take_arrow_up" class="arrow"
+                            fill="currentcolor" focusable="false">
+                            <path d="M1639 1358l-605-605-605 605-113-113 718-718 718 718z"></path>
+                        </svg>
+                    </button>
+                    <div id="our_take" class="hidden_info">
+                        <div>
+                            <h2>Fördelar med mobilabonnemang från Tele2</h2>
+                            <ul>
+                                <li><a href="https://www.mobilkoll.nu/mobilabonnemang/familj/">Familjeabonnemang</a> erbjuds.</li>
+                                <li>Ingen bindningstid på mobilabonnemangen.</li>
+                                <li>Möjligt att beställa abonnemang tillsammans med mobil.</li>
+                                <li>Går att pausa vissa abonnemangstyper.</li>
+                                <li>Ingen startavgift.</li>
+                                <li>Många kontaktvägar till kundtjänst.</li>
+                                <li>Surf delas inte i familjeabonnemangen, alla får egen.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>Nackdelar med Tele2</h2>
+                            <ul class="cons">
+                                <li>Surf går inte att spara.</li>
+                                <li>En månad uppsägningstid.</li>
+                                <li>Går inte pausa alla former av abonnemang.</li>
+                                <li>Du får använda max 50 GB surf i utlandet inom EU/EES.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <script type="text/javascript">
+        window.alert('fuck ios');
+            function _d(selector) {
+                return document.querySelector(selector);
+            }
+
+            function product_details() {
+                _d('#prd_arrow_down').classList.toggle('show');
+                _d('#prd_arrow_up').classList.toggle('show');
+                _d('#product_details').classList.toggle('display');
+
+                if (_d('#our_take').classList == 'hidden_info display') {
+                    _d('#take_arrow_up').classList.remove('show');
+                    _d('#our_take').classList.remove('display');
+                    _d('#take_arrow_down').classList.add('show');
+                }
+            }
+            function our_take() {
+                _d('#take_arrow_down').classList.toggle('show');
+                _d('#take_arrow_up').classList.toggle('show');
+                _d('#our_take').classList.toggle('display');
+                if (_d('#product_details').classList == 'hidden_info display') {
+                    _d('#prd_arrow_down').classList.add('show');
+                    _d('#prd_arrow_up').classList.remove('show');
+                    _d('#product_details').classList.remove('display');
+                }
+            }
+            // let touchEvent = 'onclick' in window ? 'click' : 'mouseover';
+            // document.getElementById('pd').addEventListener(touchEvent, product_details);
+    </script>
+</body>
+</html>
