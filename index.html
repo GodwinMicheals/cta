@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,242 +13,246 @@
         rel="stylesheet">
     <style>
         * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Serif', serif;
-}
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Serif', serif;
+        }
 
-.cta_card {
-    font-size: 1rem;
-    background: #fff;
-    border: 2px solid #d8d9da;
-}
+        .cta_card {
+            font-size: 1rem;
+            background: #fff;
+            border: 2px solid #d8d9da;
+        }
 
-.cta_container {
-    padding: 1rem;
-}
+        .cta_container {
+            padding: 1rem;
+        }
 
-.cta_card_header {
-    /* padding: 1rem; */
-    color: inherit;
-    padding: 1rem;
-}
+        .cta_card_header {
+            /* padding: 1rem; */
+            color: inherit;
+            padding: 1rem;
+        }
 
-.cta_info_text,
-.info_name {
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: #64666a;
-    margin-bottom: .5rem;
-}
+        .cta_info_text,
+        .info_name {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #64666a;
+            margin-bottom: .5rem;
+        }
 
-.cta_info_link>a {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #000;
-}
+        .cta_info_link>a {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #000;
+        }
 
-.cta_info_link>a:hover {
-    text-decoration: underline;
-}
+        .cta_info_link>a:hover {
+            text-decoration: underline;
+        }
 
-.cta_card_details {
-    display: flex;
-    padding: 1rem;
-    flex-direction: column;
-}
+        .cta_card_details {
+            display: flex;
+            padding: 1rem;
+            flex-direction: column;
+        }
 
-.details_item_a,
-.details_item_b {
-    width: 100%;
-}
+        .details_item_a,
+        .details_item_b {
+            width: 100%;
+        }
 
 
-.item_b_info {
-    display: flex;
-    flex-direction: row;
-    padding: 0.5rem 0;
-}
+        .item_b_info {
+            display: flex;
+            flex-direction: row;
+            padding: 0.5rem 0;
+        }
 
-.info_name {
-    font-size: 1.8vw;
-    font-weight: 400;
-    width: 30%;
-}
+        .info_name {
+            font-size: 1.8vw;
+            font-weight: 400;
+            width: 30%;
+        }
 
-.info_val {
-    font-size: 1.8vw;
-    font-weight: 400;
-    width: 70%;
-    padding-left: 0.5rem;
-}
+        .info_val {
+            font-size: 1.8vw;
+            font-weight: 400;
+            width: 70%;
+            padding-left: 0.5rem;
+        }
 
-.cta_card_info {
-    cursor: pointer;
-}
+        .cta_card_info {
+            cursor: pointer;
+        }
 
-.btn_item,
-.item_b_info:not(:first-child) {
-    border-top: 1px solid #d8d9da;
-}
+        .btn_item,
+        .item_b_info:not(:first-child) {
+            border-top: 1px solid #d8d9da;
+        }
 
-.btn:hover {
-    background-color: #eef7ff;
-}
+        .btn:hover {
+            background-color: #eef7ff;
+        }
 
-.btn {
-    position: relative;
-    padding: 1rem;
-    width: 100%;
-    text-decoration: none;
-    border: none;
-    background: none;
-    text-align: left;
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: #000;
-    cursor: pointer;
-}
+        .btn {
+            position: relative;
+            padding: 1rem;
+            width: 100%;
+            text-decoration: none;
+            border: none;
+            background: none;
+            text-align: left;
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #000;
+            cursor: pointer;
+        }
 
-.arrow {
-    width: 1rem;
-    height: 1rem;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    visibility: hidden;
-}
+        .arrow {
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            visibility: hidden;
+        }
 
-.show {
-    visibility: visible;
-}
+        .show {
+            visibility: visible;
+        }
 
-svg:not(:root) {
-    overflow: hidden;
-}
+        svg:not(:root) {
+            overflow: hidden;
+        }
 
-.hidden_info {
-    display: none;
-}
+        .hidden_info {
+            display: none;
+        }
 
-.display {
-    display: block !important;
-}
+        .display {
+            display: block !important;
+        }
 
-.details_item_a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.card_banner > img {
-    max-width: 80%;
-}
-/* hsl(0deg 0% 90%) */
-.card_banner {
-    max-width: 50%;
-    padding: 1rem 0;
-}
+        .details_item_a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
 
-.card_banner_btn {
-    position: relative;
-    box-sizing: border-box;
-    width: 90%;
-    background: #2179e3;
-    color: #fef7f0;
-    padding: 0.5rem 0.8rem;
-    border: none;
-    font-size: 2vw;
-    font-weight: 400;
-    /**/
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
+        .card_banner>img {
+            max-width: 80%;
+        }
 
-}
+        /* hsl(0deg 0% 90%) */
+        .card_banner {
+            max-width: 50%;
+            padding: 1rem 0;
+        }
 
-.card_banner_btn > span {
-    position: absolute;
-    margin-top: -1px;
-    transform: translateX(100%);
-    transition: all .5s;
-}
+        .card_banner_btn {
+            position: relative;
+            box-sizing: border-box;
+            width: 90%;
+            background: #2179e3;
+            color: #fef7f0;
+            padding: 0.5rem 0.8rem;
+            border: none;
+            font-size: 2vw;
+            font-weight: 400;
+            /**/
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 2px;
 
-.arr_rt {
-    margin-left: 8px;
-}
+        }
 
-#products {
-    font-family: inherit;
-    /**/
-    width: 100%;
-}
+        .card_banner_btn>span {
+            position: absolute;
+            margin-top: -1px;
+            transform: translateX(100%);
+            transition: all .5s;
+        }
 
-#products td {
-    padding: 1.3rem;
-    width: 50%;
-}
+        .arr_rt {
+            margin-left: 8px;
+        }
 
-#products tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
+        #products {
+            font-family: inherit;
+            /**/
+            width: 100%;
+        }
 
-#products tr:hover {
-    background-color: #ddd;
-}
+        #products td {
+            padding: 1.3rem;
+            width: 50%;
+        }
 
-.table_title {
-    background-color: #1f7be1;
-    text-align: center;
-    padding: 1.3rem;
-}
+        #products tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
 
-.s1 {
-    color: #fef7f0;
-}
+        #products tr:hover {
+            background-color: #ddd;
+        }
 
-#our_take>div {
-    padding-left: 1rem;
-    padding-top: .5rem;
-}
+        .table_title {
+            background-color: #1f7be1;
+            text-align: center;
+            padding: 1.3rem;
+        }
 
-#our_take>div>ul {
-    padding-left: 2rem;
-}
-@media only screen and (min-width: 900px) {
+        .s1 {
+            color: #fef7f0;
+        }
 
-    .cta_card_details {
-        display: flex;
-        padding: 1rem;
-        flex-direction: row;
-    }
+        #our_take>div {
+            padding-left: 1rem;
+            padding-top: .5rem;
+        }
 
-    .details_item_a,
-    .info_name {
-        width: 30%;
-    }
+        #our_take>div>ul {
+            padding-left: 2rem;
+        }
 
-    .details_item_b,
-    .info_val {
-        width: 70%;
-        padding-left: 0.5rem;
-    }
+        @media only screen and (min-width: 900px) {
 
-    .card_banner {
-        color: hsl(0deg 0% 90%);
-        max-width: 70% !important;
-    }
+            .cta_card_details {
+                display: flex;
+                padding: 1rem;
+                flex-direction: row;
+            }
 
-    .card_banner_btn>span {
-        margin-top: -3px;
-    }
-}
+            .details_item_a,
+            .info_name {
+                width: 30%;
+            }
+
+            .details_item_b,
+            .info_val {
+                width: 70%;
+                padding-left: 0.5rem;
+            }
+
+            .card_banner {
+                color: hsl(0deg 0% 90%);
+                max-width: 70% !important;
+            }
+
+            .card_banner_btn>span {
+                margin-top: -3px;
+            }
+        }
     </style>
     <title>CTA</title>
 </head>
+
 <body>
     <div class="cta_container">
         <div class="cta_card">
@@ -268,7 +273,9 @@ svg:not(:root) {
                             <img src="./VIMLA-logo.png" title="VIMLA LOGO" />
                         </div>
                         <div>
-                            <button onmouseover="_d('#arr').classList.toggle('arr_rt')" onmouseout="_d('#arr').classList.toggle('arr_rt')" href="/" class="card_banner_btn">Till Vimla <span id="arr">&#8594</span></button>
+                            <button onmouseover="_d('#arr').classList.toggle('arr_rt')"
+                                onmouseout="_d('#arr').classList.toggle('arr_rt')" href="/" class="card_banner_btn">Till
+                                Vimla <span id="arr">&#8594</span></button>
                         </div>
                     </div>
                     <div class="details_item_b">
@@ -288,20 +295,22 @@ svg:not(:root) {
                             <div class="item_b_info">
                                 <p class="info_name">Recommended Credit Score</p>
                                 <p class="info_val">690-850
-                                (Good - Excellent)</p>
+                                    (Good - Excellent)</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="cta_card_info">
-                <a id="pd" onclick="product_details()" class="btn_item">
+                <div id="pd" class="btn_item">
                     <button class="btn">
                         <p>Product Details</p>
-                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="prd_arrow_down" class="arrow show" fill="currentcolor" focusable="false">
+                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="prd_arrow_down" class="arrow show"
+                            fill="currentcolor" focusable="false">
                             <path d="M1034 1543L316 825l113-114 605 605 605-605 113 114z"></path>
                         </svg>
-                        <svg viewBox="0 0 2048 2048" aria-hidden="true"  id="prd_arrow_up" class="arrow" fill="currentcolor" focusable="false">
+                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="prd_arrow_up" class="arrow"
+                            fill="currentcolor" focusable="false">
                             <path d="M1639 1358l-605-605-605 605-113-113 718-718 718 718z"></path>
                         </svg>
                     </button>
@@ -348,13 +357,13 @@ svg:not(:root) {
                             </tr>
                         </table>
                     </div>
-                </a>
+                </div>
 
-                <div class="btn_item">
+                <div class="btn_item" onclick="our_take()">
                     <button class=" btn">
                         <p>Our Take</p>
-                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="take_arrow_down" class="arrow show" fill="currentcolor"
-                            focusable="false">
+                        <svg viewBox="0 0 2048 2048" aria-hidden="true" id="take_arrow_down" class="arrow show"
+                            fill="currentcolor" focusable="false">
                             <path d="M1034 1543L316 825l113-114 605 605 605-605 113 114z"></path>
                         </svg>
                         <svg viewBox="0 0 2048 2048" aria-hidden="true" id="take_arrow_up" class="arrow"
@@ -366,7 +375,8 @@ svg:not(:root) {
                         <div>
                             <h2>Fördelar med mobilabonnemang från Tele2</h2>
                             <ul>
-                                <li><a href="https://www.mobilkoll.nu/mobilabonnemang/familj/">Familjeabonnemang</a> erbjuds.</li>
+                                <li><a href="https://www.mobilkoll.nu/mobilabonnemang/familj/">Familjeabonnemang</a>
+                                    erbjuds.</li>
                                 <li>Ingen bindningstid på mobilabonnemangen.</li>
                                 <li>Möjligt att beställa abonnemang tillsammans med mobil.</li>
                                 <li>Går att pausa vissa abonnemangstyper.</li>
@@ -393,33 +403,34 @@ svg:not(:root) {
 
     <script type="text/javascript">
         window.alert('fuck ios');
-            function _d(selector) {
-                return document.querySelector(selector);
-            }
+        function _d(selector) {
+            return document.querySelector(selector);
+        }
 
-            function product_details() {
-                _d('#prd_arrow_down').classList.toggle('show');
-                _d('#prd_arrow_up').classList.toggle('show');
-                _d('#product_details').classList.toggle('display');
+        function product_details() {
+            _d('#prd_arrow_down').classList.toggle('show');
+            _d('#prd_arrow_up').classList.toggle('show');
+            _d('#product_details').classList.toggle('display');
 
-                if (_d('#our_take').classList == 'hidden_info display') {
-                    _d('#take_arrow_up').classList.remove('show');
-                    _d('#our_take').classList.remove('display');
-                    _d('#take_arrow_down').classList.add('show');
-                }
+            if (_d('#our_take').classList == 'hidden_info display') {
+                _d('#take_arrow_up').classList.remove('show');
+                _d('#our_take').classList.remove('display');
+                _d('#take_arrow_down').classList.add('show');
             }
-            function our_take() {
-                _d('#take_arrow_down').classList.toggle('show');
-                _d('#take_arrow_up').classList.toggle('show');
-                _d('#our_take').classList.toggle('display');
-                if (_d('#product_details').classList == 'hidden_info display') {
-                    _d('#prd_arrow_down').classList.add('show');
-                    _d('#prd_arrow_up').classList.remove('show');
-                    _d('#product_details').classList.remove('display');
-                }
+        }
+        function our_take() {
+            _d('#take_arrow_down').classList.toggle('show');
+            _d('#take_arrow_up').classList.toggle('show');
+            _d('#our_take').classList.toggle('display');
+            if (_d('#product_details').classList == 'hidden_info display') {
+                _d('#prd_arrow_down').classList.add('show');
+                _d('#prd_arrow_up').classList.remove('show');
+                _d('#product_details').classList.remove('display');
             }
-            // let touchEvent = 'onclick' in window ? 'click' : 'mouseover';
-            // document.getElementById('pd').addEventListener(touchEvent, product_details);
+        }
+        let touchEvent = 'onclick' in window ? 'click' : 'mouseover';
+        _d('#pd').addEventListener(touchEvent, product_details);
     </script>
 </body>
+
 </html>
